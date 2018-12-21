@@ -1,0 +1,12 @@
+AUTH0_DOMAIN=$nicholaspre.eu.auth0.com
+AUTH0_CLIENT_ID=$SjNBv32M3RBtrc1NE3W4A1wNCfJvw6fg
+AUTH0_CLIENT_SECRET=$E1J9WA6Za5yyTQCXID3sKDdm9Iw1k_Vw2OwJy0KC_A_CEifnlIdPgiDc0gnWxNIT
+CODE=$YxNmvXATmhwrKVj-
+
+curl -X POST -H 'content-type: application/json' -d '{
+  "grant_type": "authorization_code",
+  "client_id": "'SjNBv32M3RBtrc1NE3W4A1wNCfJvw6fg'",
+  "client_secret": "'E1J9WA6Za5yyTQCXID3sKDdm9Iw1k_Vw2OwJy0KC_A_CEifnlIdPgiDc0gnWxNIT'",
+  "code": "'5WS5EOWNXcyHZbpT'",
+  "redirect_uri": "http://localhost:4200"
+}' https://nicholaspre.eu.auth0.com/oauth/token
