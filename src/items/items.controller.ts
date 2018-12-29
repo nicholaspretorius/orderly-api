@@ -1,9 +1,9 @@
-import { Get, Controller, Post, Body, UsePipes, UseGuards } from "@nestjs/common";
+import { Get, Controller, Post, Body, UsePipes, UseGuards } from '@nestjs/common';
 import { ItemsService} from './items.service';
-import { Item } from "./items.interface";
-import { ValidationPipe } from "common/validation.pipe";
-import { CreateItemDTO } from "./create-item.dto";
-import { AdminGuard } from "common/admin.guard";
+import { Item } from './items.interface';
+import { ValidationPipe } from './../common/validation.pipe';
+import { CreateItemDTO } from './create-item.dto';
+import { AdminGuard } from './../common/admin.guard';
 
 @Controller('items')
 

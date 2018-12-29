@@ -18,17 +18,17 @@ export class AuthenticationMiddleware implements NestMiddleware {
         issuer: 'https://nicholaspre.eu.auth0.com/',
         algorithm: 'RS256',
       })(req, res, (err) => {
-          console.log("Req: ", req);
-          console.log("Res: ", res);
-          
-        if (err) {
-          const status = err.status || 500;
-          const message = err.message || 'Sorry, we were unable to process your request.';
-          return res.status(status).send({
-            message,
-          });
-        }
-        next();
+          // console.log('Req: ', req);
+          // console.log('Res: ', res);
+
+          if (err) {
+            const status = err.status || 500;
+            const message = err.message || 'Sorry, we were unable to process your request.';
+            return res.status(status).send({
+              message,
+            });
+          }
+          next();
       });
     };
   }
